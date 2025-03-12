@@ -62,7 +62,7 @@ export const DashboardAddModalFixed = () => {
                 message={alert.message}
             />
         );
-      }
+    }
 
     return (
         <Grid
@@ -71,9 +71,11 @@ export const DashboardAddModalFixed = () => {
             md={12}
             lg={12}
             sx={{
-                position: 'fixed',
-                left: '34%',
-                top: '19%',
+                position: 'relative',
+                left: '50%',
+                top: '50%',
+                width: '85%',
+                height: '93vh',
                 padding: 2,
                 border: "1px solid #ccc",
                 backgroundColor: "#eee",

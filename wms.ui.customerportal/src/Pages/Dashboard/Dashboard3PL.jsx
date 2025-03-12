@@ -31,12 +31,13 @@ export const Dashboard3PL = () => {
     return (
         <Grid container
             sx={{
+                height: 'calc(100vh - 64px)',
+                width: '100%',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
-                alignItems: 'center',
-                borderRight: '8px solid #0A3254',
+                alignItems: 'center'
             }}
         >
             <DashboardAddModalFixed />
