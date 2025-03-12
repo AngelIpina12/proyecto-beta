@@ -3,8 +3,7 @@ import { useAuthRedirect, getTokenInfo } from '../../utils';
 import { DashboardAddModal } from './Dialog/DashboardAddModal';
 import { DashboardModal } from './Dialog/DashboardModal';
 import CustomAlert from '../../components/Global/CustomAlert';
-import { Grid, Box, Button } from '@mui/material';
-import { DashboardAddModalFixed } from './Dialog/DashboardModalFixed';
+import { Grid, Button } from '@mui/material';
 
 
 export const DashboardSet = () => {
@@ -17,7 +16,7 @@ export const DashboardSet = () => {
 
     // Obtener el ID del usuario
     useEffect(() => {
-        const tokenInfo = getTokenInfo(); // Supongamos que devuelve { nameid: '123' }
+        const tokenInfo = getTokenInfo();
         if (tokenInfo && tokenInfo.nameid) {
             setUserId(tokenInfo.nameid);
         }
@@ -66,25 +65,11 @@ export const DashboardSet = () => {
 
     return (
         <Grid container sx={{ height: '100vh', overflow: 'hidden', overflowX: 'hidden', bgcolor: 'rgba(136, 165, 238, 0.72)' }}>
-            {/* Panel fijo a la izquierda */}
-            <Grid item xs={6} md={6} lg={6}
-                sx={{
-                    position: 'relative',
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    borderRight: '8px solid #0A3254',
-                }}
-            >
-                <DashboardAddModalFixed />
-            </Grid>
-            {/* Área de modales movibles (lado derecho) */}
-            <Grid item xs={6} md={6} lg={6} sx={{ position: 'relative', borderLeft: '8px solid #0A3254', }} >
+            <Grid item xs={6} md={6} lg={6} sx={{ position: 'relative'}} >
                 <Button
                     onClick={() => setAddModalOpen(true)}
                     sx={{
-                        width: '20%',
+                        width: '30%',
                         p: 1,
                         borderRadius: '5px',
                         backgroundColor: '#007bff',

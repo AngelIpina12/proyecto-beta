@@ -3,7 +3,6 @@ import { useAuthRedirect, getTokenInfo } from '../../utils';
 import { DashboardModal } from './Dialog/DashboardModal';
 import CustomAlert from '../../components/Global/CustomAlert';
 import { Box, Grid } from '@mui/material';
-import { DashboardAddModalFixed } from './Dialog/DashboardModalFixed';
 
 
 export const DashboardView = () => {
@@ -31,21 +30,7 @@ export const DashboardView = () => {
 
 	return (
 		<Grid container sx={{ height: '100vh', overflow: 'hidden', overflowX: 'hidden', bgcolor: 'rgba(136, 165, 238, 0.72)' }}>
-			{/* Panel fijo a la izquierda */}
-			<Grid item xs={6} md={6} lg={6}
-				sx={{
-					position: 'relative',
-					display: 'flex',
-					flexDirection: 'row',
-					justifyContent: 'center',
-					alignItems: 'center',
-					borderRight: '8px solid #0A3254',
-				}}
-			>
-				<DashboardAddModalFixed />
-			</Grid>
-			{/* Área de modales movibles (lado derecho) */}
-			<Grid item xs={6} md={6} lg={6} sx={{ position: 'relative', borderLeft: '8px solid #0A3254', }} >
+			<Grid item xs={6} md={6} lg={6} sx={{ position: 'relative' }} >
 				<Box sx={{ height: '90px' }} />
 				<DashboardModal open={true} onClose={() => { }} modals={modals} setModals={setModals} userId={userId} staticMode={true} />
 				<CustomAlert

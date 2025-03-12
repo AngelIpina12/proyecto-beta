@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import ConfirmationModal from '../../../components/Global/ConfirmationModal';
 import CustomAlert from '../../../components/Global/CustomAlert';
 
 export const DashboardModal = ({ modals, setModals, userId, staticMode = false }) => {
-    const [dragging, setDragging] = useState(false); // Para saber si se está arrastrando
-    const [offset, setOffset] = useState({ x: 0, y: 0 }); // Desplazamiento relativo al clic
-    const [animateAdd, setAnimateAdd] = useState(false);// Estado para la animación de agregar
-    const [animateDeleting, setAnimateDeleting] = useState(null); // Estado para la animación de eliminación
-    const [alert, setAlert] = useState({ open: false, message: '', severity: '' }); // Estado para el alert
+    const [dragging, setDragging] = useState(null);
+    const [offset, setOffset] = useState({ x: 0, y: 0 });
+    const [animateAdd, setAnimateAdd] = useState(false);
+    const [animateDeleting, setAnimateDeleting] = useState(null);
+    const [alert, setAlert] = useState({ open: false, message: '', severity: '' });
     const [resizing, setResizing] = useState(null);
     const [isResizing, setIsResizing] = useState(false);
+
+    // Referencia para controlar si estamos en proceso de arrastrar/redimensionar
+    const isOperationActive = useRef(false);
 
     // Animación de agregar
     useEffect(() => {
@@ -18,12 +21,52 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
         }
     }, [modals]);
 
+    // Event listeners globales para detectar movimiento y finalización del mouse
+    useEffect(() => {
+        if (staticMode) return;
+
+        const handleGlobalMouseMove = (e) => {
+            if (dragging !== null) {
+                handleMouseMove(e);
+            }
+            if (resizing) {
+                handleResizeMove(e);
+            }
+        };
+        const handleGlobalMouseUp = () => {
+            if (dragging !== null) {
+                setDragging(null);
+                setIsResizing(false);
+                isOperationActive.current = false;
+            }
+            if (resizing) {
+                setIsResizing(false);
+                setResizing(null);
+                isOperationActive.current = false;
+            }
+        };
+        if (dragging !== null || resizing) {
+            document.addEventListener('mousemove', handleGlobalMouseMove);
+            document.addEventListener('mouseup', handleGlobalMouseUp);
+            document.body.style.userSelect = 'none';
+            document.body.style.cursor = resizing ? 'nwse-resize' : 'grabbing';
+        }
+        return () => {
+            document.removeEventListener('mousemove', handleGlobalMouseMove);
+            document.removeEventListener('mouseup', handleGlobalMouseUp);
+            document.body.style.userSelect = '';
+            document.body.style.cursor = '';
+        };
+    }, [dragging, resizing, staticMode]);
+
     // Cuando se inicia el ajuste de medida arrastrando el mouse por los costados
     const handleResizeStart = (id, e, direction) => {
         if (staticMode) return;
         e.stopPropagation();
+        e.preventDefault();
         setDragging(null);
         setIsResizing(true);
+        isOperationActive.current = true;
         const modal = modals.find((modal) => modal.id === id);
         if (!modal) return;
         setResizing({
@@ -40,69 +83,63 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
 
     // Cuando se ajusta la medida arrastrando el mouse por los costados
     const handleResizeMove = (e) => {
-        if (staticMode) return;
-        if (resizing) {
-            const {
-                id,
-                direction,
-                initialX,
-                initialY,
-                initialWidth,
-                initialHeight,
-                initialLeft,
-                initialTop
-            } = resizing;
-            setModals((prevModals) =>
-                prevModals.map((modal) => {
-                    if (modal.id === id) {
-                        let newWidth = initialWidth;
-                        let newHeight = initialHeight;
-                        let newX = initialLeft;
-                        let newY = initialTop;
-                        if (direction.includes("right")) {
-                            newWidth = initialWidth + (e.clientX - initialX);
-                        }
-                        if (direction.includes("left")) {
-                            newWidth = initialWidth - (e.clientX - initialX);
-                            newX = initialLeft + (e.clientX - initialX);
-                        }
-                        if (direction.includes("bottom")) {
-                            newHeight = initialHeight + (e.clientY - initialY);
-                        }
-                        if (direction.includes("top")) {
-                            newHeight = initialHeight - (e.clientY - initialY);
-                            newY = initialTop + (e.clientY - initialY);
-                        }
-                        const maxWidth = 800; // Límite máximo de ancho
-                        const maxHeight = 600;
-                        newWidth = Math.max(Math.min(newWidth, maxWidth), 200);
-                        newHeight = Math.max(Math.min(newHeight, maxHeight), 350);
-                        return {
-                            ...modal,
-                            width: newWidth,
-                            height: newHeight,
-                            x: newX,
-                            y: newY,
-                            iframeHeight: newHeight - 50
-                        };
+        if (staticMode || !resizing) return;
+        const {
+            id,
+            direction,
+            initialX,
+            initialY,
+            initialWidth,
+            initialHeight,
+            initialLeft,
+            initialTop
+        } = resizing;
+        setModals((prevModals) =>
+            prevModals.map((modal) => {
+                if (modal.id === id) {
+                    let newWidth = initialWidth;
+                    let newHeight = initialHeight;
+                    let newX = initialLeft;
+                    let newY = initialTop;
+                    if (direction.includes("right")) {
+                        newWidth = initialWidth + (e.clientX - initialX);
                     }
-                    return modal;
-                })
-            );
-        }
-    };
-
-    // Cuando se termina de ajustar la medida dejando de arrastrar el mouse
-    const handleResizeEnd = () => {
-        if (staticMode) return;
-        setIsResizing(false);
-        setResizing(null);
+                    if (direction.includes("left")) {
+                        newWidth = initialWidth - (e.clientX - initialX);
+                        newX = initialLeft + (e.clientX - initialX);
+                    }
+                    if (direction.includes("bottom")) {
+                        newHeight = initialHeight + (e.clientY - initialY);
+                    }
+                    if (direction.includes("top")) {
+                        newHeight = initialHeight - (e.clientY - initialY);
+                        newY = initialTop + (e.clientY - initialY);
+                    }
+                    const maxWidth = 800;
+                    const maxHeight = 600;
+                    newWidth = Math.max(Math.min(newWidth, maxWidth), 200);
+                    newHeight = Math.max(Math.min(newHeight, maxHeight), 350);
+                    return {
+                        ...modal,
+                        width: newWidth,
+                        height: newHeight,
+                        x: newX,
+                        y: newY,
+                        iframeHeight: newHeight - 50
+                    };
+                }
+                return modal;
+            })
+        );
     };
 
     // Cuando se inicia el arrastre del modal
     const handleMouseDown = (id, e) => {
+        if (staticMode) return;
+        e.preventDefault();
         setIsResizing(true);
         setDragging(id);
+        isOperationActive.current = true;
         const modal = modals.find((modal) => modal.id === id);
         setOffset({
             x: e.clientX - modal.x,
@@ -112,41 +149,24 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
 
     // Cuando se mueve el mouse mientras se arrastra el modal
     const handleMouseMove = (e) => {
-        if (staticMode) return;
-        if (dragging !== null) {
-            setModals((prev) =>
-                prev.map((modal) => {
-                    if (modal.id === dragging) {
-                        // Calcula la nueva posición sin restricciones
-                        let newX = e.clientX - offset.x;
-                        let newY = e.clientY - offset.y;
+        if (staticMode || dragging === null) return;
+        setModals((prev) =>
+            prev.map((modal) => {
+                if (modal.id === dragging) {
+                    let newX = e.clientX - offset.x;
+                    let newY = e.clientY - offset.y;
+                    const containerWidth = window.innerWidth;
+                    const containerHeight = window.innerHeight;
+                    newX = Math.max(0, newX);
+                    newY = Math.max(0, newY);
+                    newX = Math.min(newX, containerWidth - modal.width);
+                    newY = Math.min(newY, containerHeight - modal.height);
 
-                        // Suponiendo que deseas usar el tamaño de la ventana como límite:
-                        const containerWidth = window.innerWidth;
-                        const containerHeight = window.innerHeight;
-
-                        // Evitar que se salga por la izquierda o arriba
-                        newX = Math.max(0, newX);
-                        newY = Math.max(0, newY);
-
-                        // Evitar que se salga por la derecha o abajo
-                        newX = Math.min(newX, containerWidth - modal.width);
-                        newY = Math.min(newY, containerHeight - modal.height);
-
-                        return { ...modal, x: newX, y: newY };
-                    }
-                    return modal;
+                    return { ...modal, x: newX, y: newY };
                 }
-                )
-            );
-        }
-    };
-
-    // Cuando se termina el arrastre del modal
-    const handleMouseUp = () => {
-        if (staticMode) return;
-        setDragging(null);
-        setIsResizing(false);
+                return modal;
+            })
+        );
     };
 
     // Manejo de eliminación de modales
@@ -204,24 +224,14 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
         left: modal.x,
         maxWidth: "800px",
         maxHeight: "600px",
-        transition: "opacity 0.3s ease, transform 0.3s ease",
+        transition: (dragging === modal.id || resizing?.id === modal.id) ? "none" : "opacity 0.3s ease, transform 0.3s ease",
         opacity: animateAdd && animateDeleting !== modal.id ? 1 : 0,
         transform: animateAdd && animateDeleting !== modal.id ? "scale(1)" : "scale(0.6)",
         boxShadow: '3px 5px 5px rgba(0,0,0,0.6)',
     });
 
     return (
-        <div
-            style={{ width: "100%", height: "100vh", position: "relative", margin: 0, padding: 0 }}
-            onMouseMove={(e) => {
-                    handleMouseMove(e);
-                    handleResizeMove(e);
-            }}
-            onMouseUp={() => {
-                    handleMouseUp();
-                    handleResizeEnd();
-            }}
-        >
+        <div style={{ width: "100%", height: "100vh", position: "relative", margin: 0, padding: 0 }}>
             {modals.map((modal) => (
                 <div
                     key={modal.id}
@@ -237,6 +247,7 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
                                 fontSize: '16px',
                                 color: '#333',
                                 padding: '5px',
+                                zIndex: 2
                             }}
                             onClick={() => handleDelete(modal.id)}
                         >
@@ -247,10 +258,10 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
                         style={{
                             backgroundColor: "#f0f0f0",
                             paddingBottom: "10px",
-                            cursor: !staticMode && "grab" ,
+                            cursor: !staticMode ? "grab" : "default",
                             userSelect: "none",
                         }}
-                        onMouseDown={(e) => handleMouseDown(modal.id, e)}
+                        onMouseDown={!staticMode ? (e) => handleMouseDown(modal.id, e) : undefined}
                     >
                         {modal.name}
                     </div>
@@ -259,11 +270,12 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
                             <div
                                 style={{
                                     position: "absolute",
-                                    width: "10px",
+                                    width: "12px",
                                     height: "100%",
                                     right: 0,
                                     top: 0,
                                     cursor: "ew-resize",
+                                    zIndex: 1
                                 }}
                                 onMouseDown={(e) => handleResizeStart(modal.id, e, "right")}
                             ></div>
@@ -271,43 +283,47 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
                                 style={{
                                     position: "absolute",
                                     width: "100%",
-                                    height: "10px",
+                                    height: "12px",
                                     bottom: 0,
                                     left: 0,
                                     cursor: "ns-resize",
+                                    zIndex: 1
                                 }}
                                 onMouseDown={(e) => handleResizeStart(modal.id, e, "bottom")}
                             ></div>
                             <div
                                 style={{
                                     position: "absolute",
-                                    width: "10px",
-                                    height: "10px",
+                                    width: "12px",
+                                    height: "12px",
                                     right: 0,
                                     bottom: 0,
                                     cursor: "nwse-resize",
+                                    zIndex: 1
                                 }}
                                 onMouseDown={(e) => handleResizeStart(modal.id, e, "bottom-right")}
                             ></div>
                             <div
                                 style={{
                                     position: "absolute",
-                                    width: "10px",
+                                    width: "12px",
                                     height: "100%",
                                     left: 0,
                                     top: 0,
                                     cursor: "ew-resize",
+                                    zIndex: 1
                                 }}
                                 onMouseDown={(e) => handleResizeStart(modal.id, e, "left")}
                             ></div>
                             <div
                                 style={{
                                     position: "absolute",
-                                    width: "10px",
-                                    height: "10px",
+                                    width: "12px",
+                                    height: "12px",
                                     left: 0,
                                     bottom: 0,
                                     cursor: "sw-resize",
+                                    zIndex: 1
                                 }}
                                 onMouseDown={(e) => handleResizeStart(modal.id, e, "bottom-left")}
                             ></div>
@@ -315,32 +331,35 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
                                 style={{
                                     position: "absolute",
                                     width: "100%",
-                                    height: "10px",
+                                    height: "12px",
                                     top: 0,
                                     left: 0,
                                     cursor: "ns-resize",
+                                    zIndex: 1
                                 }}
                                 onMouseDown={(e) => handleResizeStart(modal.id, e, "top")}
                             ></div>
                             <div
                                 style={{
                                     position: "absolute",
-                                    width: "10px",
-                                    height: "10px",
+                                    width: "12px",
+                                    height: "12px",
                                     top: 0,
                                     right: 0,
                                     cursor: "sw-resize",
+                                    zIndex: 1
                                 }}
                                 onMouseDown={(e) => handleResizeStart(modal.id, e, "top-right")}
                             ></div>
                             <div
                                 style={{
                                     position: "absolute",
-                                    width: "10px",
-                                    height: "10px",
+                                    width: "12px",
+                                    height: "12px",
                                     left: 0,
                                     top: 0,
                                     cursor: "nwse-resize",
+                                    zIndex: 1
                                 }}
                                 onMouseDown={(e) => handleResizeStart(modal.id, e, "top-left")}
                             ></div>
@@ -355,7 +374,7 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
                                 height: `${modal.iframeHeight || modal.height - 50}px`,
                                 border: 'none',
                                 borderRadius: '5px',
-                                pointerEvents: 'auto',
+                                pointerEvents: isOperationActive.current ? 'none' : 'auto',
                             }}
                             allowFullScreen
                         ></iframe>
@@ -375,5 +394,5 @@ export const DashboardModal = ({ modals, setModals, userId, staticMode = false }
                 message={alert.message}
             />
         </div>
-    )
-}
+    );
+};
