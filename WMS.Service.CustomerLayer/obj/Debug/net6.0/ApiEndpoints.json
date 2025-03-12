@@ -1,0 +1,1272 @@
+[
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/CatApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.CatApiController",
+    "Method": "GetEndCustomer",
+    "RelativePath": "api/CatApi/GetEndCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Cats.SearchCatEndCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.CatApiController",
+    "Method": "GetProductSKUCustom",
+    "RelativePath": "api/CatApi/GetProductSKUCustom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Cats.SearchCatProdBySKU",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.CatApiController",
+    "Method": "GetSupplier",
+    "RelativePath": "api/CatApi/GetSupplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Cats.SearchCatSupplier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.CatApiController",
+    "Method": "GetSupplierSKU",
+    "RelativePath": "api/CatApi/GetSupplierSKU",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Cats.SearchCatSuppSKU",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPILayer.Controllers.CustomLayerController",
+    "Method": "GetProductDetails",
+    "RelativePath": "api/CustomLayer/GetProductDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objectFilters",
+        "Type": "System.Collections.Generic.List\u00601[[WebAPILayer.Controllers.CustomLayerController\u002BProductDetailsObjectFilter, WMS.Service.CustomerLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPILayer.Controllers.CustomLayerController",
+    "Method": "SaveExternalRequirement",
+    "RelativePath": "api/CustomLayer/SaveExternalRequirement",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reqAdd",
+        "Type": "WMS.Service.CustomerLayer.Business.Objects.Req.ReqAdd",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPILayer.Controllers.CustomLayerController",
+    "Method": "ValidateSingleUser",
+    "RelativePath": "api/CustomLayer/ValidateSingleUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "asingleData",
+        "Type": "WebAPILayer.Controllers.CustomLayerController\u002BsingleUserData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/DashboardApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.DashboardApiController",
+    "Method": "GetPalletsValues",
+    "RelativePath": "api/DashboardApi/GetPalletsValues",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Dashboard.SearchFiltersDashboard",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.DashboardApiController",
+    "Method": "GetRequirementsValues",
+    "RelativePath": "api/DashboardApi/GetRequirementsValues",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Dashboard.SearchFiltersDashboard",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.DashboardApiController",
+    "Method": "GetVolumenTrailers",
+    "RelativePath": "api/DashboardApi/GetVolumenTrailers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filters",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Dashboard.SearchFiltersDashboard",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.GraphPhotosController",
+    "Method": "GetGraphPhotos",
+    "RelativePath": "api/GraphPhotos/GetGraphPhotos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WMS.Service.CustomerLayer.Controllers.GraphPhotosController\u002BPhotoSearchRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/InvApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetInvByEndCustomer",
+    "RelativePath": "api/InvApi/GetInvByEndCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterEndCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetInvByEndSKU",
+    "RelativePath": "api/InvApi/GetInvByEndSKU",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterSKU",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetInvBySupplier",
+    "RelativePath": "api/InvApi/GetInvBySupplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterSupplier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetInvBySupplierSKU",
+    "RelativePath": "api/InvApi/GetInvBySupplierSKU",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterSuppSKU",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetSKUAllocated",
+    "RelativePath": "api/InvApi/GetSKUAllocated",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterSKUInv",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetSKUInWork",
+    "RelativePath": "api/InvApi/GetSKUInWork",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterSKUInv",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetSKUNOTAllocated",
+    "RelativePath": "api/InvApi/GetSKUNOTAllocated",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterSKUInv",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetSKUOnHand",
+    "RelativePath": "api/InvApi/GetSKUOnHand",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterSKUInv",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetSupplierList",
+    "RelativePath": "api/InvApi/GetSupplierList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.InvApiController",
+    "Method": "GetTodayInv",
+    "RelativePath": "api/InvApi/GetTodayInv",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aSingleUs",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Inv.SearchFilterInvA",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/KPIApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "GetBaseOptionForUserId",
+    "RelativePath": "api/KPIApi/GetBaseOptionForUserId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.KPI.ParamKuser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "GetCustomerModules",
+    "RelativePath": "api/KPIApi/GetCustomerModules",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "GetCustomersFromWareHouse",
+    "RelativePath": "api/KPIApi/GetCustomersFromWareHouse",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.KPI.ParamWareHouse",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "GetKPIOptionsForUserId",
+    "RelativePath": "api/KPIApi/GetKPIOptionsForUserId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.KPI.ParamKuser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "GetKPIOptionsForWarehouseAndCustomer",
+    "RelativePath": "api/KPIApi/GetKPIOptionsForWarehouseAndCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Objects.KPI.ParamWarehouseCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "GetUsersToSelect",
+    "RelativePath": "api/KPIApi/GetUsersToSelect",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.KPI.ParamGetUserKPI",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "GetWareHouses",
+    "RelativePath": "api/KPIApi/GetWareHouses",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.KPI.ParamKuser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "InsertUpdateCustomOption",
+    "RelativePath": "api/KPIApi/InsertUpdateCustomOption",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aobject",
+        "Type": "WMS.Service.CustomerLayer.Business.Objects.KPI.CustomerListUsersOptionData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "SetBaseUrlToUsers",
+    "RelativePath": "api/KPIApi/SetBaseUrlToUsers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Objects.KPI.BaseListUsersOptionData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.KPIApiController",
+    "Method": "UpdateCustomOptions",
+    "RelativePath": "api/KPIApi/UpdateCustomOptions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aobject",
+        "Type": "System.Collections.Generic.List\u00601[[WMS.Service.CustomerLayer.Business.Objects.KPI.CustomerOptionUpdate, WMS.Service.CustomerLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/RecepApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetEndCustomerCatalog",
+    "RelativePath": "api/RecepApi/GetEndCustomerCatalog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Receive.SearchEndCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetEndCustomerList",
+    "RelativePath": "api/RecepApi/GetEndCustomerList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetReceiveFilterList",
+    "RelativePath": "api/RecepApi/GetReceiveFilterList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Receive.SearchFilterOpMult",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetReceiveListByCustomerDate",
+    "RelativePath": "api/RecepApi/GetReceiveListByCustomerDate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Receive.SearchFilterRECCustomerDtm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetReceiveListByDate",
+    "RelativePath": "api/RecepApi/GetReceiveListByDate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Receive.SearchFilterRECDate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetReceiveListByRecFolio",
+    "RelativePath": "api/RecepApi/GetReceiveListByRecFolio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Receive.SearchFilterRECFolio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetReceiveListBySKUDate",
+    "RelativePath": "api/RecepApi/GetReceiveListBySKUDate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Receive.SearchFilterRECSKUDtm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetReceiveListBySupplierDate",
+    "RelativePath": "api/RecepApi/GetReceiveListBySupplierDate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "afilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Receive.SearchFilterRECSupplierDtm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetReceiveSKUAndFolioInfo",
+    "RelativePath": "api/RecepApi/GetReceiveSKUAndFolioInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Receive.SearchFilterSKUAndFolio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetSupplierList",
+    "RelativePath": "api/RecepApi/GetSupplierList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.RecepApiController",
+    "Method": "GetTodayReceiveList",
+    "RelativePath": "api/RecepApi/GetTodayReceiveList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aSingleUs",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.User.SearchFilterSingleUs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/ReqApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetActiveRequirements",
+    "RelativePath": "api/ReqApi/GetActiveRequirements",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Req.SearchFilterReqActive",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetListRequirementCQCustomerFolio",
+    "RelativePath": "api/ReqApi/GetListRequirementCQCustomerFolio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Req.SearchFilterReqCQCustomerFolio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetListRequirementCQFolio",
+    "RelativePath": "api/ReqApi/GetListRequirementCQFolio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Req.SearchFilterReqCQFolio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetListRequirementDetails",
+    "RelativePath": "api/ReqApi/GetListRequirementDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Req.SearchFilterReqDetail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetListRequirementSKUEndCustomer",
+    "RelativePath": "api/ReqApi/GetListRequirementSKUEndCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Req.SearchFilterReqSKUEndCustomer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetListRequirementSupplier",
+    "RelativePath": "api/ReqApi/GetListRequirementSupplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Req.SearchFilterReqSupplier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetRequirementTypes",
+    "RelativePath": "api/ReqApi/GetRequirementTypes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetSKUList",
+    "RelativePath": "api/ReqApi/GetSKUList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Req.SearchFilterReqSKUList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ReqApiController",
+    "Method": "GetSupplierList",
+    "RelativePath": "api/ReqApi/GetSupplierList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Req.SearchFilterReqSKUList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/ShipApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipByEndSKuCustom",
+    "RelativePath": "api/ShipApi/GetShipByEndSKuCustom",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterShUsSKUEndC",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipDet",
+    "RelativePath": "api/ShipApi/GetShipDet",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterShip",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipDetailByEndCustomer",
+    "RelativePath": "api/ShipApi/GetShipDetailByEndCustomer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterSHUserECustom",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipDetailByReqFolio",
+    "RelativePath": "api/ShipApi/GetShipDetailByReqFolio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterSHUsReqFolio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipDetailByShipFolio",
+    "RelativePath": "api/ShipApi/GetShipDetailByShipFolio",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterSHUsShipFolio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipDetailByTrailerN",
+    "RelativePath": "api/ShipApi/GetShipDetailByTrailerN",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterShUsTrailer",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipDetails",
+    "RelativePath": "api/ShipApi/GetShipDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterShipDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipTodayDetail",
+    "RelativePath": "api/ShipApi/GetShipTodayDetail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterShUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.ShipApiController",
+    "Method": "GetShipTodaySummary",
+    "RelativePath": "api/ShipApi/GetShipTodaySummary",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.Ship.SearchFilterShUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/UserApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.UserApiController",
+    "Method": "GetUserInfo",
+    "RelativePath": "api/UserApi/GetUserInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aUserData",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.User.SearchFilterUserData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "System.Web.Http.ApiController",
+    "Method": "ExecuteAsync",
+    "RelativePath": "api/YardApi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "controllerContext",
+        "Type": "System.Web.Http.Controllers.HttpControllerContext",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Net.Http.HttpResponseMessage",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.YardApiController",
+    "Method": "GetEventFileListPath",
+    "RelativePath": "api/YardApi/GetEventFileListPath",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "asearchFileFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.YM.SearchFileEvent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.YardApiController",
+    "Method": "GetEventImageListPath",
+    "RelativePath": "api/YardApi/GetEventImageListPath",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "asearchImageFilter",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.YM.SearchImageEvent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.YardApiController",
+    "Method": "GetSummary",
+    "RelativePath": "api/YardApi/GetSummary",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aSingleUs",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.User.SearchFilterSingleUs",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.YardApiController",
+    "Method": "GetTrailerHistory",
+    "RelativePath": "api/YardApi/GetTrailerHistory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aTrailerFolio",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.YM.SearchFilterFolioTR",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.YardApiController",
+    "Method": "GetTrailerStatusTypes",
+    "RelativePath": "api/YardApi/GetTrailerStatusTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WMS.Service.CustomerLayer.Controllers.YardApiController",
+    "Method": "GetYardManagementList",
+    "RelativePath": "api/YardApi/GetYardManagementList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "aFilterYM",
+        "Type": "WMS.Service.CustomerLayer.Business.Filter.YM.SearchYardMngList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

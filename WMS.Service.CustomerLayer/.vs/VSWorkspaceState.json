@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Business",
+    "\\Business\\Filter",
+    "\\Business\\Objects",
+    "\\Middlewares\\JWT",
+    "\\SQL",
+    "\\SQL\\SPs",
+    "\\Viewmodel"
+  ],
+  "SelectedNode": "\\WMS.Service.CustomerLayer.csproj",
+  "PreviewInSolutionExplorer": false
+}

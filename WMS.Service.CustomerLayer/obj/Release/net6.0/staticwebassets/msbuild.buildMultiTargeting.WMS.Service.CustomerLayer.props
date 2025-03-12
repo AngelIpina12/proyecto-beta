@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WMS.Service.CustomerLayer.props" />
+</Project>

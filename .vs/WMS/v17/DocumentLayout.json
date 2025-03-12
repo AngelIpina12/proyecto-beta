@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\sql\\sps\\usp_customerportal_insertupdateoption.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\sql\\sps\\usp_customerportal_insertupdateoption.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\controllers\\kpiapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\controllers\\kpiapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\business\\managers\\kpimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\business\\managers\\kpimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\business\\objects\\kpi\\customerlistusersoptiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\business\\objects\\kpi\\customerlistusersoptiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\business\\objects\\kpi\\baselistusersoptiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\business\\objects\\kpi\\baselistusersoptiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\sql\\sps\\usp_customerportal_setbasetouserid.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\sql\\sps\\usp_customerportal_setbasetouserid.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\sql\\sps\\usp_customerportal_getbaseforuserid.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\sql\\sps\\usp_customerportal_getbaseforuserid.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\business\\interfaces\\ikpimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\business\\interfaces\\ikpimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|c:\\users\\jose ipi\u00F1a\\desktop\\nuevo wms\\wms.ui.customerportal\\wms.service.customerlayer\\sql\\sps\\usp_customerportal_insertupdateoption.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{35FD67F0-115A-4CEA-86AD-32C0420A5E85}|WMS.Service.CustomerLayer\\WMS.Service.CustomerLayer.csproj|solutionrelative:wms.service.customerlayer\\sql\\sps\\usp_customerportal_insertupdateoption.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 214,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "USP_CustomerPortal_InsertUpdateOption.sql ",
+              "DocumentMoniker": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_InsertUpdateOption.sql",
+              "RelativeDocumentMoniker": "WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_InsertUpdateOption.sql",
+              "ToolTip": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_InsertUpdateOption.sql",
+              "RelativeToolTip": "WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_InsertUpdateOption.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-24T23:09:13.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "USP_CustomerPortal_SetBaseToUserId.SQL",
+              "DocumentMoniker": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_SetBaseToUserId.SQL",
+              "RelativeDocumentMoniker": "WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_SetBaseToUserId.SQL",
+              "ToolTip": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_SetBaseToUserId.SQL",
+              "RelativeToolTip": "WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_SetBaseToUserId.SQL",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-24T16:11:26.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "USP_CustomerPortal_GetBaseForUserId.sql",
+              "DocumentMoniker": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_GetBaseForUserId.sql",
+              "RelativeDocumentMoniker": "WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_GetBaseForUserId.sql",
+              "ToolTip": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_GetBaseForUserId.sql",
+              "RelativeToolTip": "WMS.Service.CustomerLayer\\SQL\\SPs\\USP_CustomerPortal_GetBaseForUserId.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-24T16:11:11.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KPIApiController.cs",
+              "DocumentMoniker": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Controllers\\KPIApiController.cs",
+              "RelativeDocumentMoniker": "WMS.Service.CustomerLayer\\Controllers\\KPIApiController.cs",
+              "ToolTip": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Controllers\\KPIApiController.cs",
+              "RelativeToolTip": "WMS.Service.CustomerLayer\\Controllers\\KPIApiController.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAwwKMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T22:53:32.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IKPIManager.cs",
+              "DocumentMoniker": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Business\\Interfaces\\IKPIManager.cs",
+              "RelativeDocumentMoniker": "WMS.Service.CustomerLayer\\Business\\Interfaces\\IKPIManager.cs",
+              "ToolTip": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Business\\Interfaces\\IKPIManager.cs",
+              "RelativeToolTip": "WMS.Service.CustomerLayer\\Business\\Interfaces\\IKPIManager.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T17:08:09.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KPIManager.cs",
+              "DocumentMoniker": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Business\\Managers\\KPIManager.cs",
+              "RelativeDocumentMoniker": "WMS.Service.CustomerLayer\\Business\\Managers\\KPIManager.cs",
+              "ToolTip": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Business\\Managers\\KPIManager.cs",
+              "RelativeToolTip": "WMS.Service.CustomerLayer\\Business\\Managers\\KPIManager.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAqwLMAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T22:15:05.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomerListUsersOptionData.cs",
+              "DocumentMoniker": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Business\\Objects\\KPI\\CustomerListUsersOptionData.cs",
+              "RelativeDocumentMoniker": "WMS.Service.CustomerLayer\\Business\\Objects\\KPI\\CustomerListUsersOptionData.cs",
+              "ToolTip": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Business\\Objects\\KPI\\CustomerListUsersOptionData.cs",
+              "RelativeToolTip": "WMS.Service.CustomerLayer\\Business\\Objects\\KPI\\CustomerListUsersOptionData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T21:24:34.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseListUsersOptionData.cs",
+              "DocumentMoniker": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Business\\Objects\\KPI\\BaseListUsersOptionData.cs",
+              "RelativeDocumentMoniker": "WMS.Service.CustomerLayer\\Business\\Objects\\KPI\\BaseListUsersOptionData.cs",
+              "ToolTip": "C:\\Users\\Jose Ipi\u00F1a\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\Business\\Objects\\KPI\\BaseListUsersOptionData.cs",
+              "RelativeToolTip": "WMS.Service.CustomerLayer\\Business\\Objects\\KPI\\BaseListUsersOptionData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T21:24:46.358Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

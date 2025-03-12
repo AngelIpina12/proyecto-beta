@@ -1,0 +1,11 @@
+export const HOME_ROUTE = '/CUSTOMERBKEND/';
+export const LOGIN_ROUTE = '/CUSTOMERBKEND/login';
+export const YARD_SUMMARY_ROUTE = '/CUSTOMERBKEND/YardSummary';
+export const RECEIVES_ROUTE = '/CUSTOMERBKEND/Receives';
+export const REQUIREMENTS_ROUTE = '/CUSTOMERBKEND/Requirements';
+export const INVENTORY_ROUTE = '/CUSTOMERBKEND/Inventory';
+export const SHIPPING_ROUTE = '/CUSTOMERBKEND/Shipping';
+export const DASHBOARD_3PL_ROUTE = '/CUSTOMERBKEND/Dashboard3PL';
+export const DASHBOARD_VIEW_ROUTE = '/CUSTOMERBKEND/DashboardView';
+export const DASHBOARD_SET_ROUTE = '/CUSTOMERBKEND/DashboardSet';
+export const DASHBOARD_SETTINGS_ROUTE = '/CUSTOMERBKEND/DashboardSettings';

@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "sM0496t6D1gjMXhtgivulSg2vkAQHDb+khA1vkiQwTw=",
+  "Source": "WMS.Service.CustomerLayer",
+  "BasePath": "_content/WMS.Service.CustomerLayer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WMS.Service.CustomerLayer\\wwwroot",
+      "Source": "WMS.Service.CustomerLayer",
+      "ContentRoot": "C:\\Users\\Jose Ipiña\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\wwwroot\\",
+      "BasePath": "_content/WMS.Service.CustomerLayer",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Jose Ipiña\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\wwwroot\\.gitkeep",
+      "SourceId": "WMS.Service.CustomerLayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jose Ipiña\\Desktop\\Nuevo WMS\\WMS.UI.CustomerPortal\\WMS.Service.CustomerLayer\\wwwroot\\",
+      "BasePath": "_content/WMS.Service.CustomerLayer",
+      "RelativePath": ".gitkeep",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\.gitkeep"
+    }
+  ]
+}
